@@ -20,7 +20,14 @@ const getRegions = createAsyncThunk('home/getRegions', async (region) => {
 });
 
 const initialState = {
-  regions: [],
+  regions: {
+    'Asia': 0,
+    'Oceania': 0,
+    'Europe': 0,
+    'Africa': 0,
+    'Northern America': 0,
+    'South America': 0,
+  },
 }
 
 const regionSlice = createSlice({
@@ -30,7 +37,13 @@ const regionSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(getRegions.fulfilled, (state, action) => {
-        state.regions = action.payload;
+        const sum = action.payload.reduce((acc, region) => acc + region.population, 0);
+        const formattedNumber = sum.toLocaleString('en');
+        if (action.payload[0].region === 'Americas') {
+          state.regions[action.payload[0].subregion] = formattedNumber;
+        } else {
+          state.regions[action.payload[0].region] = formattedNumber;
+        }
       })
   }
 });
