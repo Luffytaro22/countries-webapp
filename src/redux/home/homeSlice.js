@@ -18,3 +18,16 @@ const getRegions = createAsyncThunk('home/getRegions', async (region) => {
     throw new Error('Region not found');
   }
 });
+
+const initialState = {
+  regions: [],
+}
+
+const regionSlice = createSlice({
+  name: 'regions',
+  initialState,
+  reducers: {},
+});
+
+export { getRegions };
+export default regionSlice;
