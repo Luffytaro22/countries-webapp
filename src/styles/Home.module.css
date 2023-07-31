@@ -6,8 +6,12 @@
 .regions {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   border: 1px solid black;
+}
+
+.regions p {
+  text-align: right;
 }
 
 .regions:nth-child(2),
