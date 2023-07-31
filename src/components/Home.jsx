@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getRegions } from '../redux/home/regionSlice';
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import asia from '../assets/asia.png';
 import africa from '../assets/africa.png';
 import australia from '../assets/australia.png';
@@ -30,7 +31,8 @@ const Home = () => {
   }, []); // Empty array of dependencies ensures the useEffect runs only once on mount
 
   return (
-    <div className={styles.container}>
+    <div>
+      <NavLink to="/details" className={styles.container}>
       {Object.keys(regionsNames).map((name) => (
         <div key={name} className={styles.regions}>
           <img src={regionsNames[name]} alt={name} className={styles.images} />
@@ -38,6 +40,7 @@ const Home = () => {
           <p>Population: {regions[name]}</p>
         </div>
       ))}
+      </NavLink>
     </div>
   );
 }
