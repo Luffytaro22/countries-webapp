@@ -30,4 +30,4 @@ const regionSlice = createSlice({
 });
 
 export { getRegions };
-export default regionSlice;
+export default regionSlice.reducer;
