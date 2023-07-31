@@ -17,8 +17,8 @@ const regions = {
 const Home = () => {
   return (
     <div>
-      {regions.Object.keys((name) => (
-        <div>
+      {Object.keys(regions).map((name) => (
+        <div key={name}>
           <img src={regions[name]} alt={name} />
           <h2>{name}</h2>
         </div>
