@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.regions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.regions:nth-child(2),
+.regions:nth-child(3),
+.regions:nth-child(6) {
+  background-color: crimson;
+}
+
+.regions:nth-child(1),
+.regions:nth-child(4),
+.regions:nth-child(5) {
+  background-color: red;
+}
+
+.regions:hover {
+  cursor: pointer;
+}
+
+.names {
+  text-align: right;
+}
+
+.images {
+  width: 100px;
+}
