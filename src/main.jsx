@@ -1,12 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Provider } from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
 import App from './App.jsx'
 import store from './redux/store.js'
-import { getRegions } from './redux/home/regionSlice.js'
 import './index.css'
-
-store.dispatch(getRegions());
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
