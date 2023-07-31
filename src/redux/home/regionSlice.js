@@ -27,6 +27,12 @@ const regionSlice = createSlice({
   name: 'regions',
   initialState,
   reducers: {},
+  extraReducers(builder) {
+    builder
+      .addCase(getRegions.fulfilled, (state, action) => {
+        state.regions = action.payload;
+      })
+  }
 });
 
 export { getRegions };
