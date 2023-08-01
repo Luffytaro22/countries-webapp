@@ -1,14 +1,13 @@
 import { IoIosArrowBack } from 'react-icons/io';
 import { BsFillGearFill } from 'react-icons/bs';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+  const navigate = useNavigate();
   return (
     <header>
       <nav>
-        <NavLink to="/">
-          <IoIosArrowBack />
-        </NavLink>
+        <IoIosArrowBack onClick={() => navigate(-1)} />
         <input type="text" placeholder="City name..." />
         <BsFillGearFill />
       </nav>
