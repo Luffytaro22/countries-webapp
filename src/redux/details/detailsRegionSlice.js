@@ -21,8 +21,16 @@ const detailsReggionSlice = createSlice({
       .addCase(getRegions.fulfilled, (state, action) => {
         if (action.payload[0].region === 'Americas') {
           state.region[action.payload[0].subregion] = [...action.payload];
+          const newState = { ...state };
+          newState.region[action.payload[0].subregion].map((country) => {
+            country.flagName = 'https://flagcdn.com/' + country.alpha2code.toLowerCase() + '.svg';
+          });
         } else {
           state.region[action.payload[0].region] = [...action.payload];
+          const newState = { ...state };
+          newState.region[action.payload[0].region].map((country) => {
+            country.flagName = 'https://flagcdn.com/' + country.alpha2code.toLowerCase() + '.svg';
+          });
         }
       })
   }
