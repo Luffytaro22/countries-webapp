@@ -22,6 +22,7 @@ const DetailsRegion = () => {
   const { regionName } = location.state;
   const { regions } = useSelector((state) => state.regions);
   const { region } = useSelector((state) => state.detailRegions);
+  console.log(region[regionName].map((country) => console.log(country)))
   return (
     <div>
       <div className={styles.region}>
@@ -35,9 +36,9 @@ const DetailsRegion = () => {
       <div className={styles.countriesContainer}>
         {region[regionName].map((country) => (
           <div key={country.name} className={styles.countries}>
-            <img src={country.flag} alt={country.name} className={styles.images} />
+            <img src={country.flagName} alt={country.name} className={styles.images} />
             <h3>{country.name}</h3>
-            <p>{country.population}</p>
+            <p>{country.population.toLocaleString('en')}</p>
           </div>
         ))}
       </div>
