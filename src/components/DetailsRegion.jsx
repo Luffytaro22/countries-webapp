@@ -6,6 +6,7 @@ import australia from '../assets/australia.png';
 import europe from '../assets/europe.png';
 import nAmerica from '../assets/northern-america.png';
 import sAmerica from '../assets/south-america.png';
+import styles from '../styles/DetailsRegion.module.css';
 
 const regionsNames = {
   'Asia': asia,
@@ -21,16 +22,18 @@ const DetailsRegion = ({ regionName }) => {
   const { region } = useSelector((state) => state.detailRegions);
   return (
     <div>
-      <div>
+      <div className={styles.region}>
         <img src={regionsNames[regionName]} alt={regionName} />
-        <h2>{regionName}</h2>
-        <p>Population: {regions[regionName]}</p>
+        <div>
+          <h2>{regionName}</h2>
+          <p>Population: {regions[regionName]}</p>
+        </div>
       </div>
       <p>STATS BY COUNTRY</p>
-      <div>
+      <div className={styles.countriesContainer}>
         {region[regionName].map((country) => (
-          <div key={country.name}>
-            <img src={country.flag} />
+          <div key={country.name} className={styles.countries}>
+            <img src={country.flag} alt={country.name} className={styles.images} />
             <h3>{country.name}</h3>
             <p>{country.population}</p>
           </div>
