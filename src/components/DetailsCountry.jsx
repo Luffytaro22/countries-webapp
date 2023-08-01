@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import styles from '../styles/DetailsCountry.module.css';
 
 const DetailsCountry = () => {
   const location = useLocation();
@@ -10,10 +11,12 @@ const DetailsCountry = () => {
 
   return (
     <div>
-      <div>
-        <img src={country.flagName} alt={country.name} />
-        <h2>{country.name}</h2>
-        <p>Population: {country.population.toLocaleString('en')}</p>
+      <div className={styles.country}>
+        <img src={country.flagName} alt={country.name} className={styles.images} />
+        <div>
+          <h2>{country.name}</h2>
+          <p>Population: {country.population.toLocaleString('en')}</p>
+        </div>
       </div>
       <p>CITY INFORMATION</p>
       <div>
