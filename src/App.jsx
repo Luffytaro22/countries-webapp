@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
-import Details from './components/Details';
+import DetailsRegion from './components/DetailsRegion';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path='/details' element={<Details />} />
+        <Route path='/detailsRegion' element={<DetailsRegion />} />
       </Routes>
     </BrowserRouter>
   );
