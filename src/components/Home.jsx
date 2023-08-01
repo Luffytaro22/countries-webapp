@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getRegions } from '../redux/home/regionSlice';
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import asia from '../assets/asia.png';
 import africa from '../assets/africa.png';
 import australia from '../assets/australia.png';
@@ -32,15 +32,15 @@ const Home = () => {
 
   return (
     <div>
-      <NavLink to="/details" className={styles.container}>
       {Object.keys(regionsNames).map((name) => (
-        <div key={name} className={styles.regions}>
+      <Link to="/detailsRegion" className={styles.container} key={name} state={{regionName: name}} >
+        <div className={styles.regions}>
           <img src={regionsNames[name]} alt={name} className={styles.images} />
           <h2 className={styles.names}>{name}</h2>
           <p>Population: {regions[name]}</p>
         </div>
+      </Link>
       ))}
-      </NavLink>
     </div>
   );
 }
