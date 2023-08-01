@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import asia from '../assets/asia.png';
 import africa from '../assets/africa.png';
 import australia from '../assets/australia.png';
@@ -17,13 +17,15 @@ const regionsNames = {
   'South America': sAmerica,
 }
 
-const DetailsRegion = ({ regionName }) => {
+const DetailsRegion = () => {
+  const location = useLocation();
+  const { regionName } = location.state;
   const { regions } = useSelector((state) => state.regions);
   const { region } = useSelector((state) => state.detailRegions);
   return (
     <div>
       <div className={styles.region}>
-        <img src={regionsNames[regionName]} alt={regionName} />
+        <img src={regionsNames[regionName]} alt={regionName} className={styles.images} />
         <div>
           <h2>{regionName}</h2>
           <p>Population: {regions[regionName]}</p>
@@ -41,10 +43,6 @@ const DetailsRegion = ({ regionName }) => {
       </div>
     </div>
   );
-}
-
-DetailsRegion.propTypes = {
-  regionName: PropTypes.string.isRequired,
 }
 
 export default DetailsRegion;
