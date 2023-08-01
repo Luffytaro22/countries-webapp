@@ -4,10 +4,26 @@ import styles from '../styles/DetailsCountry.module.css';
 
 const DetailsCountry = () => {
   const location = useLocation();
+  let country;
   const { regionName, countryName } = location.state;
   const { region } = useSelector((state) => state.detailRegions);
-  const countryRegion = region[regionName];
-  const country = countryRegion.find((obj) => obj.name === countryName);
+  if (!regionName) {
+    Object.keys(region).some((regionName) => {
+      country = region[regionName].find((obj) => obj.name.toLowerCase() === countryName);
+      return country !== undefined;
+    });
+  } else {
+    const countryRegion = region[regionName];
+    country = countryRegion.find((obj) => obj.name === countryName);
+  }
+
+  if (!country) {
+    return (
+      <div>
+        <h2>Error, not matching</h2>
+      </div>
+    );
+  }
 
   return (
     <div>
