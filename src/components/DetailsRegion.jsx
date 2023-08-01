@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import asia from '../assets/asia.png';
 import africa from '../assets/africa.png';
 import australia from '../assets/australia.png';
@@ -22,7 +22,6 @@ const DetailsRegion = () => {
   const { regionName } = location.state;
   const { regions } = useSelector((state) => state.regions);
   const { region } = useSelector((state) => state.detailRegions);
-  console.log(region[regionName].map((country) => console.log(country)))
   return (
     <div>
       <div className={styles.region}>
@@ -35,11 +34,13 @@ const DetailsRegion = () => {
       <p>STATS BY COUNTRY</p>
       <div className={styles.countriesContainer}>
         {region[regionName].map((country) => (
-          <div key={country.name} className={styles.countries}>
+        <Link to="/detailsCountry" key={country.name} state={{countryName: country.name, regionName: regionName}}>
+          <div className={styles.countries}>
             <img src={country.flagName} alt={country.name} className={styles.images} />
             <h3>{country.name}</h3>
-            <p>{country.population.toLocaleString('en')}</p>
+            <p>Population: {country.population.toLocaleString('en')}</p>
           </div>
+        </Link>
         ))}
       </div>
     </div>
