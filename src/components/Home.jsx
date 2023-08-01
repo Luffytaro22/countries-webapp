@@ -31,9 +31,9 @@ const Home = () => {
   }, []); // Empty array of dependencies ensures the useEffect runs only once on mount
 
   return (
-    <div>
+    <div className={styles.container}>
       {Object.keys(regionsNames).map((name) => (
-      <Link to="/detailsRegion" className={styles.container} key={name} state={{regionName: name}} >
+      <Link to="/detailsRegion" key={name} state={{regionName: name}} >
         <div className={styles.regions}>
           <img src={regionsNames[name]} alt={name} className={styles.images} />
           <h2 className={styles.names}>{name}</h2>
