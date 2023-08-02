@@ -31,17 +31,20 @@ const Home = () => {
   }, []); // Empty array of dependencies ensures the useEffect runs only once on mount
 
   return (
-    <div className={styles.container}>
-      {Object.keys(regionsNames).map((name) => (
-      <Link to="/detailsRegion" key={name} state={{regionName: name}} >
-        <div className={styles.regions}>
-          <img src={regionsNames[name]} alt={name} className={styles.images} />
-          <h2 className={styles.names}>{name}</h2>
-          <p>Population: {regions[name]}</p>
-        </div>
-      </Link>
-      ))}
-    </div>
+    <>
+      <p className={styles.stats}>STATS BY REGION</p>
+      <div className={styles.container}>
+        {Object.keys(regionsNames).map((name) => (
+        <Link to="/detailsRegion" key={name} state={{regionName: name}}  className={styles.regions} >
+          <div>
+            <img src={regionsNames[name]} alt={name} className={styles.images} />
+            <h2 className={styles.names}>{name}</h2>
+            <p className={styles.names}>Population: {regions[name]}</p>
+          </div>
+        </Link>
+        ))}
+      </div>
+    </>
   );
 }
 
