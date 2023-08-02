@@ -1,6 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('./fonts/GillSans/Gill\ Sans.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Bold.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Bold\ Italic.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Heavy.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Heavy\ Italic.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Italic.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Light.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Light\ Italic.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Medium.otf');
+  src: url('./fonts/GillSans/Gill\ Sans\ Medium\ Italic.otf');
+  src: url('./fonts/GillSans/GillSans\ Condensed\ Bold.otf');
+  src: url('./fonts/GillSans/GillSans\ Condensed.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #4368b0;
 }
 
 :root {

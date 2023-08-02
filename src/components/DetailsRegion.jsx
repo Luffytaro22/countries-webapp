@@ -31,14 +31,14 @@ const DetailsRegion = () => {
           <p>Population: {regions[regionName]}</p>
         </div>
       </div>
-      <p>STATS BY COUNTRY</p>
+      <p className={styles.stats}>STATS BY COUNTRY</p>
       <div className={styles.countriesContainer}>
         {region[regionName].map((country) => (
-        <Link to="/detailsCountry" key={country.name} state={{countryName: country.name, regionName: regionName}}>
-          <div className={styles.countries}>
-            <img src={country.flagName} alt={country.name} className={styles.images} />
-            <h3>{country.name}</h3>
-            <p>Population: {country.population.toLocaleString('en')}</p>
+        <Link to="/detailsCountry" key={country.name} state={{countryName: country.name, regionName: regionName}}  className={styles.countries}>
+          <div>
+            <img src={country.flagName} alt={country.name} className={styles.imagesCountries} />
+            <h3 className={styles.names}>{country.name}</h3>
+            <p className={styles.names}>Population: {country.population.toLocaleString('en')}</p>
           </div>
         </Link>
         ))}
