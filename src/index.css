@@ -21,6 +21,11 @@
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #4368b0;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
