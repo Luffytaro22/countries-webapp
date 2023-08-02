@@ -19,7 +19,7 @@ const DetailsCountry = () => {
 
   if (!country) {
     return (
-      <div>
+      <div className={styles.error}>
         <h2>Error, not matching</h2>
       </div>
     );
@@ -34,16 +34,16 @@ const DetailsCountry = () => {
           <p>Population: {country.population.toLocaleString('en')}</p>
         </div>
       </div>
-      <p>CITY INFORMATION</p>
-      <div>
-        <p><strong>Capital:</strong> <span>{country.capital}</span></p>
-        <p><strong>Area:</strong> <span>{country.area}</span></p>
-        <p><strong>Currency:</strong> <span>{country.currencies[0].name}</span></p>
-        <p><strong>Demonym:</strong> <span>{country.demonym}</span></p>
-        <p><strong>Language:</strong> <span>{country.languages[0].name}</span></p>
-        <p><strong>Region:</strong> <span>{country.region}</span></p>
-        <p><strong>Subregion:</strong> <span>{country.subregion}</span></p>
-        <p><strong>Timezone:</strong> <span>{country.timezones[0]}</span></p>
+      <p className={styles.stats}>COUNTRY INFORMATION</p>
+      <div className={styles.infoContainer}>
+        <p className={styles.info}><strong>Capital:</strong> <span>{country.capital}</span></p>
+        <p className={styles.info}><strong>Area:</strong> <span>{country.area}</span></p>
+        <p className={styles.info}><strong>Currency:</strong> <span>{country.currencies[0].name}</span></p>
+        <p className={styles.info}><strong>Demonym:</strong> <span>{country.demonym}</span></p>
+        <p className={styles.info}><strong>Language:</strong> <span>{country.languages[0].name}</span></p>
+        <p className={styles.info}><strong>Region:</strong> <span>{country.region}</span></p>
+        <p className={styles.info}><strong>Subregion:</strong> <span>{country.subregion}</span></p>
+        <p className={styles.info}><strong>Timezone:</strong> <span>{country.timezones[0]}</span></p>
       </div>
     </div>
   );
