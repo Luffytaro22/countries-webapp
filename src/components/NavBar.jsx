@@ -1,9 +1,10 @@
 import { IoIosArrowBack } from 'react-icons/io';
 import { BsFillGearFill } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 const NavBar = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -19,10 +20,16 @@ const NavBar = () => {
       })
     }
   };
+  const handleClick = () => {
+    if (location.pathname !== '/') {
+      navigate(-1);
+    }
+  };
+
   return (
     <header>
       <nav>
-        <IoIosArrowBack onClick={() => navigate(-1)} />
+        <IoIosArrowBack onClick={handleClick} />
         <input
           type="text"
           placeholder="Country name..."
