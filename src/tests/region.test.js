@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { it, expect } from '@jest/globals';
 import MockAdapter from 'axios-mock-adapter';
 import { getRegions } from '../redux/home/regionSlice';
 import store from '../redux/store';
