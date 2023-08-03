@@ -60,7 +60,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a id="live-demo"></a>
-[Live Demo](https://bookstore-bice-pi.vercel.app/)
+[Live Demo](https://countries-webapp.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +138,7 @@ npm run dev
 ```
 
 ### Deployment
-You can deploy this project using [this link](https://bookstore-bice-pi.vercel.app/)
+You can deploy this project using [this link](https://countries-webapp.vercel.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
