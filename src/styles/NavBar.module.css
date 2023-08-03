@@ -12,14 +12,36 @@
 
 .input {
   outline: none;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   padding: 2px 10px;
   background-color: #5689e4;
   font-family: 'Lato', sans-serif;
   color: white;
   border: 1px solid #2c4572;
+  border-right: none;
 }
 
 .input::placeholder {
   color: white;
+}
+
+.closeInput {
+  background-color: #5689e4;
+  border-radius: 0 10px 10px 0;
+  padding: 2px 10px;
+  border: 1px solid #2c4572;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.info {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
