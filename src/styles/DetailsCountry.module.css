@@ -1,0 +1,59 @@
+.images {
+  width: 50%;
+}
+
+.country {
+  display: flex;
+  background-color: #5989e4;
+  font-family: 'Gill Sans', sans-serif;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  color: white;
+}
+
+.stats {
+  background-color: #35548b;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+
+.infoContainer {
+  font-family: 'Gill Sans', sans-serif;
+  color: white;
+  animation-name: container;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes container {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.info {
+  padding: 5px 10px;
+}
+
+.info:nth-child(even) {
+  background-color: #365592;
+}
+
+.info:nth-child(odd) {
+  background-color: #4368b0;
+}
+
+.error {
+  font-family: 'Gill Sans', sans-serif;
+  color: white;
+  text-align: center;
+}

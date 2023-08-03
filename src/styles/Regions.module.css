@@ -1,0 +1,79 @@
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  animation-name: container;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes container {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.stats {
+  background-color: #35548b;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 0.8em;
+}
+
+.regions {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border: none;
+  padding: 5px 10px;
+}
+
+.regions:nth-child(2),
+.regions:nth-child(3),
+.regions:nth-child(6) {
+  background-color: #32528a;
+}
+
+.regions:nth-child(1),
+.regions:nth-child(4),
+.regions:nth-child(5) {
+  background-color: #4368b0;
+}
+
+.regions:hover {
+  cursor: pointer;
+}
+
+.names {
+  text-align: right;
+  color: white;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+.images {
+  width: 100%;
+  height: 100px;
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(5, 20%);
+  }
+}
