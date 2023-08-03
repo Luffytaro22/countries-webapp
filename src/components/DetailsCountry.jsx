@@ -7,6 +7,7 @@ const DetailsCountry = () => {
   let country;
   const { regionName, countryName } = location.state;
   const { region } = useSelector((state) => state.detailRegions);
+
   if (!regionName) {
     Object.keys(region).some((regionName) => {
       country = region[regionName].find((obj) => obj.name.toLowerCase() === countryName);
@@ -38,7 +39,7 @@ const DetailsCountry = () => {
       <div className={styles.infoContainer}>
         <p className={styles.info}><strong>Capital:</strong> <span>{country.capital}</span></p>
         <p className={styles.info}><strong>Area:</strong> <span>{country.area}</span></p>
-        <p className={styles.info}><strong>Currency:</strong> <span>{country.currencies[0].name}</span></p>
+        {country.currencies[0] ? <p className={styles.info}><strong>Currency:</strong> <span>{country.currencies[0].name}</span></p> : ''}
         <p className={styles.info}><strong>Demonym:</strong> <span>{country.demonym}</span></p>
         <p className={styles.info}><strong>Language:</strong> <span>{country.languages[0].name}</span></p>
         <p className={styles.info}><strong>Region:</strong> <span>{country.region}</span></p>
