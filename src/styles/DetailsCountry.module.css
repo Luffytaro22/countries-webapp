@@ -25,6 +25,19 @@
 .infoContainer {
   font-family: 'Gill Sans', sans-serif;
   color: white;
+  animation-name: container;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes container {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .info {
