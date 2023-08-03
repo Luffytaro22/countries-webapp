@@ -1,0 +1,44 @@
+.stats {
+  background-color: #35548b;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 0.8em;
+}
+
+h1,
+h2,
+.list * {
+  color: white;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  background-color: #5989e4;
+  font-family: 'Gill Sans', sans-serif;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.images {
+  width: 100%;
+}
+
+.categories {
+  background-color: #5989e4;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+.categories h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.list {
+  text-align: center;
+}
