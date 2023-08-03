@@ -10,7 +10,7 @@ const DetailsCountry = () => {
 
   if (!regionName) {
     Object.keys(region).some((regionName) => {
-      country = region[regionName].find((obj) => obj.name.toLowerCase() === countryName);
+      country = region[regionName].find((obj) => obj.name.toLowerCase() === countryName.toLowerCase());
       return country !== undefined;
     });
   } else {
