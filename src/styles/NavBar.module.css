@@ -46,7 +46,7 @@
   }
 
   to {
-    transform: scaleX(100%);
+    transform: scaleX(1);
   }
 }
 
