@@ -8,7 +8,7 @@ import australia from '../assets/australia.png';
 import europe from '../assets/europe.png';
 import nAmerica from '../assets/northern-america.png';
 import sAmerica from '../assets/south-america.png';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Regions.module.css';
 
 const regionsNames = {
   'Asia': asia,
@@ -19,7 +19,7 @@ const regionsNames = {
   'South America': sAmerica,
 }
 
-const Home = () => {
+const Regions = () => {
   const dispatch = useDispatch();
   const { regions } = useSelector((state) => state.regions);
 
@@ -48,4 +48,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default Regions;
