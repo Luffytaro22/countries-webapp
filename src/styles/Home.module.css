@@ -1,6 +1,19 @@
 .container {
   display: grid;
   grid-template-columns: 50% 50%;
+  animation-name: container;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes container {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .stats {

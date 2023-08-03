@@ -35,6 +35,19 @@
 .inputContainer {
   display: flex;
   align-items: center;
+  animation-name: input;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes input {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .hide {
