@@ -35,7 +35,7 @@ const Regions = () => {
       <p className={styles.stats}>STATS BY REGION</p>
       <div className={styles.container}>
         {Object.keys(regionsNames).map((name) => (
-        <Link to="/detailsRegion" key={name} state={{regionName: name}}  className={styles.regions} >
+        <Link to={`/regions/detailsRegion/${name}`} key={name} state={{regionName: name}}  className={styles.regions} >
           <div>
             <img src={regionsNames[name]} alt={name} className={styles.images} />
             <h2 className={styles.names}>{name}</h2>
