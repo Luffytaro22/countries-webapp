@@ -14,8 +14,9 @@
   outline: none;
   border-radius: 10px 0 0 10px;
   padding: 2px 10px;
-  background-color: #5689e4;
+  background-color: transparent;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
   color: white;
   border: 1px solid #2c4572;
   border-right: none;
@@ -23,10 +24,16 @@
 
 .input::placeholder {
   color: white;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+}
+
+.input:focus {
+  border: 1px solid #fff;
 }
 
 .closeInput {
-  background-color: #5689e4;
+  background-color: #2c4572;
   border-radius: 0 10px 10px 0;
   padding: 2px 10px;
   border: 1px solid #2c4572;
