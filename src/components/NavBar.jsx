@@ -3,6 +3,7 @@ import { BsFillGearFill } from 'react-icons/bs';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import earth from '/planeta-tierra.png';
 import styles from '../styles/NavBar.module.css';
 
 const NavBar = () => {
@@ -36,7 +37,8 @@ const NavBar = () => {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <IoIosArrowBack onClick={() => navigate(-1)} className={location.pathname === '/' ? styles.hide : styles.back} />
-        <AiOutlineMenu className={location.pathname === '/' ? '' : styles.hide} />
+        <AiOutlineMenu className={location.pathname === '/' ? styles.hamburguer : styles.hide} />
+        <img src={earth} alt="logo" className={location.pathname === '/' ? `${styles.hide} ${styles.logo}` : styles.hide} />
         <p className={inputVisible ? `${styles.hide}` : `${styles.info}`}>
           {location.pathname === '/'
             ? 'Countries Webapp'
