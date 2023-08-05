@@ -77,8 +77,48 @@
 
 .images {
   width: 50%;
+  max-width: 500px;
 }
 
 .imagesCountries {
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .stats {
+    font-size: 1.2em;
+  }
+
+  .region h2,
+  h3 {
+    font-size: 2em;
+  }
+
+  .region p,
+  .names:last-child {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .countriesContainer {
+    grid-template-columns: repeat(3, 33%);
+    justify-items: center;
+  }
+
+  .countries {
+    max-width: 500px;
+  }
+
+  .countries:nth-child(even) {
+    background-color: #365592;
+  }
+
+  .countries:nth-child(odd) {
+    background-color: #4368b0;
+  }
+
+  .countries:hover {
+    transform: translateY(-5%);
+  }
 }

@@ -31,6 +31,7 @@
   justify-content: end;
   border: none;
   padding: 5px 10px;
+  border-radius: 10px;
 }
 
 .regions:nth-child(2),
@@ -131,16 +132,69 @@
   .container {
     grid-template-columns: 33% 33% 33%;
   }
+
+  .regions:nth-child(odd) {
+    background-color: #4368b0;
+  }
+
+  .regions:nth-child(even) {
+    background-color: #32528a;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .container {
-    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+  }
+
+  .regions {
+    border: 1px solid black;
+  }
+
+  .regions:nth-child(even) {
+    background-color: #4368b0;
+  }
+
+  .images {
+    height: 150px;
+  }
+
+  .stats {
+    font-size: 1.2em;
+  }
+
+  .regions:hover {
+    background-color: #32528a;
+    box-shadow: 0 0 10px 5px #32528a;
+    transition: all 0.5s ease-in-out;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .container {
-    grid-template-columns: repeat(5, 20%);
+    gap: 20px;
+  }
+
+  .images {
+    height: 250px;
+  }
+
+  .regions {
+    width: 240px;
+    max-width: 340px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .regions {
+    width: 330px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.5em;
   }
 }

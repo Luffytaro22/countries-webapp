@@ -1,5 +1,6 @@
 .images {
   width: 50%;
+  max-width: 495px;
 }
 
 .country {
@@ -56,4 +57,28 @@
   font-family: 'Gill Sans', sans-serif;
   color: white;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .stats {
+    font-size: 1.2em;
+  }
+
+  .infoContainer {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .country h2 {
+    font-size: 2em;
+  }
+
+  .country p {
+    font-size: 1.5em;
+  }
+
+  .info {
+    font-size: 1.5em;
+  }
 }
