@@ -24,7 +24,7 @@ const NavBar = () => {
   };
   const findCountry = (event) => {
     if (event.key === 'Enter') {
-      navigate('/detailsCountry', {
+      navigate(`/detailsCountry/${searchQuery}`, {
         state: {
           countryName: searchQuery,
         }
