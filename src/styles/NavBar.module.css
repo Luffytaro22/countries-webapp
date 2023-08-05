@@ -115,17 +115,16 @@
     gap: 30px;
   }
 
-  .divIcons * {
-    font-size: 1.5em;
-  }
-
+  .divIcons *,
+  .back,
   .info {
     font-size: 1.5em;
   }
 
   .info:hover,
   .divIcons *:hover,
-  .closeInput:hover {
+  .closeInput:hover,
+  .back:hover {
     cursor: pointer;
   }
 
@@ -135,5 +134,10 @@
 
   .closeInput:hover {
     background-color: #af4040;
+  }
+
+  .back:hover {
+    background-color: #4067af;
+    border: 0.1px solid white;
   }
 }
