@@ -35,7 +35,7 @@ const NavBar = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <IoIosArrowBack onClick={() => navigate(-1)} className={location.pathname === '/' ? styles.hide : ''} />
+        <IoIosArrowBack onClick={() => navigate(-1)} className={location.pathname === '/' ? styles.hide : styles.back} />
         <AiOutlineMenu className={location.pathname === '/' ? '' : styles.hide} />
         <p className={inputVisible ? `${styles.hide}` : `${styles.info}`}>
           {location.pathname === '/'
@@ -57,8 +57,10 @@ const NavBar = () => {
             />
             <AiOutlineClose className={styles.closeInput} onClick={handleCloseIcon} />
         </div>
-        <AiOutlineSearch onClick={handleIconClick} />
-        <BsFillGearFill />
+        <div className={styles.divIcons}>
+          <AiOutlineSearch onClick={handleIconClick} />
+          <BsFillGearFill />
+        </div>
       </nav>
     </header>
   );
