@@ -36,9 +36,19 @@ h2,
 
 .categories h2 {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 .list {
   text-align: center;
+  text-decoration: underline;
+  text-decoration-color: antiquewhite;
+}
+
+.filters {
+  padding: 10px 0;
+}
+
+.filters:nth-child(odd) {
+  background-color: #35548b;
 }
