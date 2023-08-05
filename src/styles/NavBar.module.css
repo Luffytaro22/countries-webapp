@@ -12,7 +12,11 @@
 .divIcons {
   display: flex;
   align-items: center;
-  gap: 15px;
+}
+
+.divIcons * {
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .nav {
@@ -86,5 +90,50 @@
 
   .hamburguer {
     display: none;
+  }
+
+  .inputContainer {
+    height: 26px;
+    width: 50%;
+    max-width: 374px;
+  }
+
+  .input {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px 0 0 20px;
+    font-size: 1.2em;
+  }
+
+  .closeInput {
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    font-size: 1.5em;
+  }
+
+  .divIcons {
+    gap: 30px;
+  }
+
+  .divIcons * {
+    font-size: 1.5em;
+  }
+
+  .info {
+    font-size: 1.5em;
+  }
+
+  .info:hover,
+  .divIcons *:hover,
+  .closeInput:hover {
+    cursor: pointer;
+  }
+
+  .divIcons *:hover {
+    background-color: #2c4572;
+  }
+
+  .closeInput:hover {
+    background-color: #af4040;
   }
 }
