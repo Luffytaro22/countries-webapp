@@ -34,7 +34,7 @@ const DetailsRegion = () => {
       <p className={styles.stats}>STATS BY COUNTRY</p>
       <div className={styles.countriesContainer}>
         {region[regionName].map((country) => (
-        <Link to="/detailsCountry" key={country.name} state={{countryName: country.name, regionName: regionName}}  className={styles.countries}>
+        <Link to={`/detailsCountry/${country.name}`} key={country.name} state={{countryName: country.name, regionName: regionName}}  className={styles.countries}>
           <div>
             <img src={country.flagName} alt={country.name} className={styles.imagesCountries} />
             <h3 className={styles.names}>{country.name}</h3>

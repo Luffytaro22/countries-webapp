@@ -13,7 +13,7 @@ const Home = () => {
       <div className={styles.categories}>
         <h2>Select the categories!</h2>
         <ul className={styles.list}>
-          <li>
+          <li className={styles.filters}>
             <Link to="/regions">
               Continents
             </Link>
