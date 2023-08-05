@@ -77,3 +77,14 @@
   font-family: 'Lato', sans-serif;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 768px) {
+  .logo.hide {
+    display: block;
+    width: 50px;
+  }
+
+  .hamburguer {
+    display: none;
+  }
+}
