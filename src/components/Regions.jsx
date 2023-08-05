@@ -30,6 +30,22 @@ const Regions = () => {
     });
   }, []); // Empty array of dependencies ensures the useEffect runs only once on mount
 
+
+  Object.keys(regions).forEach((name) => {
+    if (regions[name] === 0) {
+      return (
+        <>
+          <div className={styles.ldsellipsis}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </>
+      );
+    }
+  })
+
+
   return (
     <>
       <p className={styles.stats}>STATS BY REGION</p>

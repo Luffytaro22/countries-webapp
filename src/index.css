@@ -22,7 +22,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: calc(100vh - 44px);
   background-color: #4368b0;
 }
 

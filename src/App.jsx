@@ -13,7 +13,7 @@ function App() {
         <Route index path="/" element={<Home />} />
         <Route path="/regions" element={<Regions />} />
         <Route path='/regions/detailsRegion/:regionName' element={<DetailsRegion />} />
-        <Route path='/detailsCountry' element={<DetailsCountry />} />
+        <Route path='/detailsCountry/:countryName' element={<DetailsCountry />} />
       </Routes>
     </BrowserRouter>
   );
