@@ -39,8 +39,10 @@ const NavBar = () => {
         <AiOutlineMenu className={location.pathname === '/' ? '' : styles.hide} />
         <p className={inputVisible ? `${styles.hide}` : `${styles.info}`}>
           {location.pathname === '/'
-            ? 'Continents Population'
-            : location.pathname === '/detailsRegion'
+            ? 'Countries Webapp'
+            : location.pathname === '/regions'
+            ? 'Regions Population'
+            : location.pathname.includes('/regions/detailsRegion')
             ? 'Countries Population'
             : 'Country Information'
           }
