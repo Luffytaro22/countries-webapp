@@ -52,3 +52,21 @@ h2,
 .filters:nth-child(odd) {
   background-color: #35548b;
 }
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .images {
+    max-width: 750px;
+  }
+
+  .stats {
+    font-size: 1.2em;
+  }
+
+  .filters {
+    font-size: 1.3em;
+  }
+}
