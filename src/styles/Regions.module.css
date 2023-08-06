@@ -32,6 +32,9 @@
   border: none;
   padding: 5px 10px;
   border-radius: 10px;
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .regions:nth-child(2),
@@ -115,6 +118,7 @@
   .regions {
     width: 240px;
     max-width: 340px;
+    height: 300px;
   }
 }
 

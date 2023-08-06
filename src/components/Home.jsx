@@ -17,7 +17,12 @@ const Home = () => {
             <Link to="/regions">
               Continents
             </Link>
-            </li>
+          </li>
+          <li className={styles.filters}>
+            <Link to="/countries">
+              Countries
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
