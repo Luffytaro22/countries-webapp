@@ -1,6 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { getRegions } from '../redux/home/regionSlice';
-import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import asia from '../assets/asia.png';
 import africa from '../assets/africa.png';
@@ -20,38 +18,7 @@ const regionsNames = {
 }
 
 const Regions = () => {
-  const dispatch = useDispatch();
   const { regions } = useSelector((state) => state.regions);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Dispatch the getRegions action only once when the component mounts
-    const fetchRegions = async () => {
-      try {
-        Object.keys(regionsNames).forEach((name) => {
-          dispatch(getRegions(name));
-        });
-        setLoading(false); // Cuando termina la petición, actualizamos el estado para ocultar el mensaje de carga
-      } catch (error) {
-        // Manejo de errores si ocurre algún problema en la petición
-        setLoading(false); // Importante también ocultar el mensaje de carga en caso de error
-      }
-    };
-    fetchRegions();
-  }, [dispatch]); // Empty array of dependencies ensures the useEffect runs only once on mount
-
-  if (loading) {
-    return (
-      <>
-        <div className={styles.ldsellipsis}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </>
-    );
-  }
-
 
   return (
     <>
