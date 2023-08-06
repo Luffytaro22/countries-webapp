@@ -43,10 +43,14 @@
 .countries {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: end;
   border: none;
   color: white;
   padding: 10px 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90px;
+  border-radius: 10px;
 }
 
 .names {
@@ -84,6 +88,18 @@
   width: 100%;
 }
 
+@media only screen and (min-width: 425px) {
+  .countries {
+    height: 120px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .countries {
+    height: 150px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .stats {
     font-size: 1.2em;
@@ -98,16 +114,23 @@
   .names:last-child {
     font-size: 1.5em;
   }
+
+  .countries {
+    height: 250px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .countriesContainer {
     grid-template-columns: repeat(3, 33%);
     justify-items: center;
+    gap: 10px;
   }
 
   .countries {
     max-width: 500px;
+    height: 150px;
+    width: 70%;
   }
 
   .countries:nth-child(even) {
@@ -120,5 +143,12 @@
 
   .countries:hover {
     transform: translateY(-5%);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .countries {
+    height: 200px;
+    width: 80%;
   }
 }
